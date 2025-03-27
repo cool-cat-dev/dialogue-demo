@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://bn6poxsspngww"]
+
+[ext_resource type="Texture2D" uid="uid://erfv7qdxv4t" path="res://Assets/shop.png" id="1_pvxd5"]
+[ext_resource type="Texture2D" uid="uid://d20pejsp7tuci" path="res://Assets/Shopkeeper.png" id="2_1pqs2"]
+
+[sub_resource type="GDScript" id="GDScript_do1l5"]
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	DialogueManager.start_dialogue(\"Test Dialogue\", Callable(self, \"next_action\"))
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
+func next_action():
+	DialogueManager.start_dialogue(\"End of demo\")
+"
+
+[node name="DialogueDemo" type="Node2D"]
+script = SubResource("GDScript_do1l5")
+
+[node name="Background" type="CanvasLayer" parent="."]
+
+[node name="Shop" type="Sprite2D" parent="Background"]
+position = Vector2(577.5, 322.5)
+scale = Vector2(2.03345, 1.67448)
+texture = ExtResource("1_pvxd5")
+
+[node name="Shopkeeper" type="Sprite2D" parent="Background"]
+position = Vector2(838.625, 393.125)
+scale = Vector2(10.2394, 10.0833)
+texture = ExtResource("2_1pqs2")
+region_enabled = true
+region_rect = Rect2(9, 1, 47, 51)
