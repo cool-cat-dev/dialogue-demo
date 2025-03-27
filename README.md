@@ -46,4 +46,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 Thank you for downloading this dialogue system! I hope it helps out on your game dev journey.
 If you have any questions or issues - create an issue in this repo or just comment on one of my videos.
 
-- cool cat
+cool cat
